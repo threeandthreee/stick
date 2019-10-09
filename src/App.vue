@@ -1,24 +1,22 @@
-<template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+<template lang='pug'>
+v-app
+  v-system-bar(absolute app window)
+    span.mx-2.font-weight-bold Stick
+    span.mx-2 File
+    span.mx-2 Edit
+    v-spacer
+    v-icon mdi-minus
+    v-icon mdi-checkbox-blank-outline
+    v-icon mdi-close
+  v-navigation-drawer(app)
+    span file tree if folder selected
+  v-content(app)
+    HelloWorld
+  v-footer(app)
+    span.mx-2 cursor location
+    v-spacer
+    span.mx-2 language
+    span.mx-2 spaces
 </template>
 
 <script>
